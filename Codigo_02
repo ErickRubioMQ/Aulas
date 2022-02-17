@@ -1,0 +1,32 @@
+#define LedVM  13
+#define LedAM  9
+#define LedVD  5
+#define ON     HIGH
+#define OFF    LOW
+
+int tempoON =10000;
+int tempoOFF =500;
+int tempoAM = 2000; 
+
+void setup()
+{
+  pinMode(LedVM , OUTPUT);
+  pinMode(LedAM , OUTPUT);
+  pinMode(LedVD , OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(LedVM, ON);
+  delay(tempoON);
+  digitalWrite(LedVM, OFF);
+  delay(tempoOFF);
+  digitalWrite(LedAM, ON);
+  delay(tempoAM);
+  digitalWrite(LedAM, OFF);
+  delay(tempoOFF);
+  digitalWrite(LedVD, ON);
+  delay(tempoON);
+  digitalWrite(LedVD, OFF);
+  delay(tempoOFF);
+}
